@@ -23,13 +23,19 @@ const NavBar = () => {
     <>
       <div className="navbar bg-base-300 shadow-sm">
         <div className="flex-1">
-          <Link to="/" className="btn btn-ghost text-xl">🧑‍💻DevTinder</Link>
+          <Link to="/" className="btn btn-ghost text-xl">
+            🧑‍💻DevTinder
+          </Link>
         </div>
         {user && (
           <div className="flex gap-2">
             <div>Welcome, {user.firstName}</div>
             <div className="dropdown dropdown-end">
-              <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn btn-ghost btn-circle avatar"
+              >
                 <div className="w-10 rounded-full">
                   <img alt="User Avatar" src={user.photoUrl} />
                 </div>
@@ -44,10 +50,21 @@ const NavBar = () => {
                     <span className="badge">New</span>
                   </Link>
                 </li>
-                <li><Link to="/connections">Connections</Link></li>
-                <li><Link to="/requests">Requests</Link></li>
-                <li><Link to="/courses">Courses</Link></li> {/* Added Courses link */}
-                <li><a onClick={handleLogout}>Logout</a></li>
+                <li>
+                  <Link to="/connections">Connections</Link>
+                </li>
+                <li>
+                  <Link to="/requests">Requests</Link>
+                </li>
+                <li>
+                  <Link to="/courses">Courses</Link>
+                </li>
+                <li>
+                  <Link to="/test-series">Test Series</Link> {/* Added Test Series link */}
+                </li>
+                <li>
+                  <a onClick={handleLogout}>Logout</a>
+                </li>
               </ul>
             </div>
           </div>
