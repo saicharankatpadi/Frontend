@@ -11,8 +11,7 @@ import appStore from './utils/appStore';
 import Feed from './components/Feed';
 import Connections from './components/Connections';
 import Requests from './components/Requests';
-import Courses from './components/Courses';
-import TestSeries from './components/TestSeries'; // Import the TestSeries component
+
 
 function App() {
   return (
@@ -26,8 +25,6 @@ function App() {
             <Route path="connections" element={<Connections />} />
             <Route path="requests" element={<Requests />} />
             <Route path="chat/:targetUserId" element={<Chat />} />
-            <Route path="courses" element={<Courses />} />
-            <Route path="test-series" element={<TestSeries />} /> {/* Add the TestSeries route */}
           </Route>
         </Routes>
       </Router>
